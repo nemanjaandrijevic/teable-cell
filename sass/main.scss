@@ -1,0 +1,97 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@import "variables";
+
+.divCell {
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+
+    background-color: $background;
+    color: $text-color;
+
+    .divCell-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        padding-bottom: 4px;
+        border-bottom: 1px solid $text-color;
+
+        .match-status {
+            color: $metch-status-color;
+        }
+
+        nav {
+
+            display: flex;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex: 1 0 16px;
+                justify-content: flex-end;
+
+                li {
+                    flex: 0 0 16px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .player {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        padding-top: 2px;
+
+        .name {
+            flex: 0 0 auto;
+        }
+
+        .game {
+            display: flex;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex: 1 0 16px;
+                justify-content: flex-end;
+
+                li {
+                    flex: 0 0 16px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+}
+
+.winner {
+    font-weight: bold;
+}
+
+.status-finished {
+    color: $metch-status-color;
+}
+
+.tai-break{
+    font-size: 10px;
+}
