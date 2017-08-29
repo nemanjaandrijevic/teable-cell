@@ -7,14 +7,37 @@
 
 @import "variables";
 
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
 .divCell {
     display: flex;
     font-family: 'Roboto Condensed', sans-serif;
     flex-direction: column;
     width: 300px;
-    margin: 0 auto;
-    padding: 12px;
+    margin: 30px auto;
+    padding: 12px 12px 6px 12px;
 
+    border-right: 2px solid $border-color;
+    border-bottom: 2px solid $border-color;
     background-color: $background;
     color: $text-color;
 
@@ -23,12 +46,14 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
+        font-size: 12px;
 
         padding-bottom: 4px;
         border-bottom: 1px solid $text-color;
 
         .match-status {
             color: $metch-status-color;
+
         }
 
         nav {
@@ -45,7 +70,7 @@
 
                 li {
                     flex: 0 0 16px;
-                    text-align: right;
+                    text-align: left;
                 }
             }
         }
@@ -56,6 +81,8 @@
         flex-direction: row;
         align-items: center;
         width: 100%;
+
+        font-size: 13px;
 
         padding-top: 2px;
 
@@ -76,7 +103,7 @@
 
                 li {
                     flex: 0 0 16px;
-                    text-align: right;
+                    text-align: left;
                 }
             }
         }
